@@ -12,3 +12,4 @@ jobs:
       path: ./php/8.3/fpm/alpine/caddy
       repository: mdshack/php
       tag: 8.3-fpm-alpine-caddy
+    secrets: inherit
