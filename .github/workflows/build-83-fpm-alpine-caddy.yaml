@@ -1,0 +1,16 @@
+name: "Build & Push mdshack/php:8.3-fpm-alpine-caddy"
+
+on:
+  push:
+    branches: [main]
+    paths: [php/8.3/fpm/alpine/caddy]
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/build-image.yaml
+        with: 
+          path: ./php/8.3/fpm/alpine/caddy
+          repository: mdshack/php
+          tag: 8.3-fpm-alpine-caddy

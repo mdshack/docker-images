@@ -1,0 +1,5 @@
+{
+    "packages": {
+        "php/8.3/fpm/alpine/caddy": "1.0.0"
+    }
+}
