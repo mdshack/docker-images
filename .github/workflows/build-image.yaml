@@ -50,5 +50,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ${{ github.event.inputs.repository }}:${{ github.event.inputs.tag }}
-          context: ${{ github.event.inputs.path }}
+          tags: ${{ inputs.repository }}:${{ inputs.tag }}
+          cache-from: type=registry,ref=${{ inputs.repository }}:${{ inputs.tag }}
+          cache-to: type=inline
+          context: ${{ inputs.path }}
