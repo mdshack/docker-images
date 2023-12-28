@@ -9,6 +9,8 @@ jobs:
   build_and_push:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      
       - uses: ./.github/workflows/build-image.yaml
         with: 
           path: ./php/8.3/fpm/alpine/caddy
