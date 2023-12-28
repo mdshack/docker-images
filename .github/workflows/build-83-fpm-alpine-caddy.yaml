@@ -9,9 +9,7 @@ jobs:
   build_and_push:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      
-      - uses: ./.github/workflows/build-image.yaml
+      - uses: mdshack/docker-images/.github/workflows/build-image.yaml@main
         with: 
           path: ./php/8.3/fpm/alpine/caddy
           repository: mdshack/php
