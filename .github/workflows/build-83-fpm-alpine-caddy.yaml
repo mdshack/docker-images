@@ -7,10 +7,8 @@ on:
 
 jobs:
   build_and_push:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: mdshack/docker-images/.github/workflows/build-image.yaml@main
-        with: 
-          path: ./php/8.3/fpm/alpine/caddy
-          repository: mdshack/php
-          tag: 8.3-fpm-alpine-caddy
+    uses: mdshack/docker-images/.github/workflows/build-image.yaml@main
+    with: 
+      path: ./php/8.3/fpm/alpine/caddy
+      repository: mdshack/php
+      tag: 8.3-fpm-alpine-caddy
