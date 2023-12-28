@@ -7,4 +7,3 @@ COPY ./bin/* /usr/local/bin/
 
 # Run scripts in this directory on initialization
 RUN mkdir /docker-init
-

@@ -3,7 +3,7 @@ name: "Build & Push mdshack/php:8.3-fpm-alpine-caddy"
 on:
   push:
     branches: [main]
-    paths: [php/8.3/fpm/alpine/caddy]
+    paths: [php/8.3/fpm/alpine/caddy/**]
 
 jobs:
   build_and_push:
