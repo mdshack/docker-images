@@ -3,6 +3,7 @@ FROM php:8.3-fpm-alpine
 RUN apk update
 RUN apk add --update caddy
 
-COPY entrypoint.sh /entrypoint.sh
+COPY ./bin/* /usr/local/bin/
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+# Run scripts in this directory on initialization
+RUN mkdir /docker-init
