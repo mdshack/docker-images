@@ -1,0 +1,15 @@
+name: "Build & Push mdshack/php:8.3-fpm-alpine-caddy"
+
+on:
+  push:
+    branches: [main]
+    paths: [dnsmasq/**]
+
+jobs:
+  build_and_push:
+    uses: mdshack/docker-images/.github/workflows/build-image.yaml@main
+    with: 
+      path: ./dnsmasq
+      repository: mdshack/dnsmasq
+      tag: latest
+    secrets: inherit
