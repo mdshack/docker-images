@@ -7,4 +7,4 @@ for file in "/docker-init"/*; do
     fi
 done
 
-php-fpm & caddy run --config /etc/caddy/Caddyfile
+php-fpm -c /etc/php.d/ & caddy run --config /etc/caddy/Caddyfile

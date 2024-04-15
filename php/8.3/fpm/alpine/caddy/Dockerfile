@@ -7,3 +7,6 @@ COPY ./bin/* /usr/local/bin/
 
 # Run scripts in this directory on initialization
 RUN mkdir /docker-init
+
+# PHP related configuration
+RUN mkdir /etc/php.d/
